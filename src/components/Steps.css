@@ -23,6 +23,9 @@
     width: 130px;
     padding: 0.5rem;
 }
+input:focus{
+    outline: 0;
+}
 .step svg{
     font-size: 1.6rem;
     margin-bottom: .2rem;

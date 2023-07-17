@@ -14,7 +14,7 @@ const Steps = ({currentStep}) => {
             </div>
             <div className={`step ${currentStep >=1 ? "active" : ""}`}>
             <AiOutlineCalendar/>
-                <p>Dados Complementares</p>
+                <p>Complemento</p>
             </div>
             <div className={`step ${currentStep >=2 ? "active" : ""}`}>
             <CiLocationOn/>
