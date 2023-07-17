@@ -39,6 +39,7 @@ const LocationForm = ({ data, updateFieldHandler }) => {
             <div className="form-control">
                 <label htmlFor="name">Bairro: </label>
                 <input
+                    disabled
                     type="text"
                     autoComplete="off"
                     name="bairro"
@@ -52,26 +53,28 @@ const LocationForm = ({ data, updateFieldHandler }) => {
             <div className="form-control">
                 <label htmlFor="name">Cidade: </label>
                 <input
+                    disabled
                     type="text"
                     autoComplete="off"
                     name="cidade"
                     id="cidade"
                     placeholder="Cidade"
                     required
-                    value={ data.cidade = cidade  || ''}
+                    value={data.cidade = cidade || ''}
                     onChange={(e) => updateFieldHandler("cidade", e.target.value)}
                 />
             </div>
             <div className="form-control">
                 <label htmlFor="name">Estado: </label>
                 <input
+                    disabled
                     type="text"
                     autoComplete="off"
                     name="estado"
                     id="estado"
                     placeholder="Estado"
                     required
-                    value={ data.estado = estado|| ''}
+                    value={data.estado = estado || ''}
                     onChange={(e) => updateFieldHandler("estado", e.target.value)}
                 />
             </div>
