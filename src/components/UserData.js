@@ -9,6 +9,7 @@ const UserData = ({ data, updateFieldHandler }) => {
                 <InputMask type="text"
                     name="text"
                     id="dtnascimento"
+                    value={data.dtnascimento || ""}
                     placeholder="dd/mm/aaaa"
                     mask="99/99/9999"
                     required
@@ -23,7 +24,7 @@ const UserData = ({ data, updateFieldHandler }) => {
                 value={data.genero || ""}
                 onChange={(e) => updateFieldHandler("genero", e.target.value)}
                 >
-                    <option default disabled selected></option>
+                    <option default disabled></option>
                     <option value="Masculino">Masculino</option>
                     <option value="Feminino">Feminino</option>
                     <option value="Outro">Outro</option>
@@ -36,7 +37,7 @@ const UserData = ({ data, updateFieldHandler }) => {
                 value={data.civil || ""}
                 onChange={(e) => updateFieldHandler("civil", e.target.value)}
                 >
-                    <option default disabled selected></option>
+                    <option default disabled></option>
                     <option value="Solteiro">Solteiro</option>
                     <option value="Casado">Casado</option>
                     <option value="Separado">Separado</option>

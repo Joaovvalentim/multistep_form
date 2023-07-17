@@ -39,6 +39,22 @@ const ThanksForm = ({data}) => {
                 <span>Estado Civil: </span>
                 {data.civil}
             </p>
+            <p className=" review-data">
+                <span>CEP: </span>
+                {data.cep}
+            </p>
+            <p className=" review-data">
+                <span>Bairro: </span>
+                {data.bairro}
+            </p>
+            <p className=" review-data">
+                <span>Cidade: </span>
+                {data.cidade}
+            </p>
+            <p className=" review-data">
+                <span>Estado: </span>
+                {data.estado}
+            </p>
             <p className="review-data">
                 <span>Satisfação com o formulário: </span>
                 {emojiData[data.review]}
