@@ -2,8 +2,19 @@
   --primary-color: #6C63FF;
   --secondary-color: #00D1B2;
   --error-color: #FF4081;
+  --text-color: #222222 ;
 }
 
 *{
   font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #222222;
+}
+body{
+  background-color: #EDEDED;
+}
+p{
+  color: #777
 }
