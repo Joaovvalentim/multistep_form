@@ -1,6 +1,7 @@
 import './App.css';
 //Components
 import { GrFormPreviousLink, GrFormNextLink } from 'react-icons/gr';
+import { BsFillSendCheckFill } from 'react-icons/bs';
 import UserForm from './components/UserForm';
 import UserDataForm from './components/UserData';
 import Location from './components/Location';
@@ -13,9 +14,9 @@ import { useForm } from './hooks/useForm';
 
 function App() {
 
-const formComponents = [
-  <UserForm/>, <UserDataForm/>, <Location/>, <ReviewForm/>, <Thanks/>]
-const {currentStep, currentComponent} =  useForm(formComponents)
+  const formComponents = [
+    <UserForm />, <UserDataForm />, <Location />, <ReviewForm />, <Thanks />]
+  const { currentStep, currentComponent, changeStep, isLastStep , isFirtsStep} = useForm(formComponents)
 
 
   return (
@@ -27,17 +28,22 @@ const {currentStep, currentComponent} =  useForm(formComponents)
       </div>
       <div className='form-container'>
         <p>etapas</p>
-        <form>
+        <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className='inputs-container'>{currentComponent}</div>
           <div className='action'></div>
-          <button type='button'>
+          {!isFirtsStep && (          <button type='button' onClick={() => changeStep(currentStep - 1)}>
             <GrFormPreviousLink />
             <span>Voltar</span>
-          </button>
-          <button type='submit'>
+          </button>)}
+          {!isLastStep ? (<button type='submit'>
             <span>Avançar</span>
             <GrFormNextLink />
           </button>
+          ) : (<button type='button'>
+            <span>Enviar</span>
+            <BsFillSendCheckFill />
+          </button>
+          )}
         </form>
       </div>
     </div>
