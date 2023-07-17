@@ -13,17 +13,17 @@ import Steps from './components/Steps';
 import { useForm } from './hooks/useForm';
 import { useState } from 'react';
 
-const formTemplate = {
-  name: "",
-  email: "",
-  datanascimento: "",
-  gender: "",
-  cep: "",
-  city: "",
-  district: "",
-  review: "",
-  comment: "",
-}
+// const formTemplate = {
+//   name: "",
+//   email: "",
+//   datanascimento: "",
+//   gender: "",
+//   cep: "",
+//   city: "",
+//   district: "",
+//   review: "",
+//   comment: "",
+// }
 
 function App() {
 

@@ -11,13 +11,13 @@
 .steps::after{
     content: "";
     width: 400px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #7a297a;
     position: absolute;
     top: 20px;
 }
 .step{
     text-align: center;
-    background-color: #fff;
+    background-color: whitesmoke;
     z-index: 1;
     font-size: 0.7rem;
     width: 130px;
@@ -34,5 +34,5 @@ input:focus{
     font-weight: bold;
 }
 .active>svg{
-    fill: var(--primary-color)
+    fill: #00b688
 }

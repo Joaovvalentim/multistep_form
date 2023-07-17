@@ -9,10 +9,10 @@
     transition: 0.3s;
 }
 .score-container svg:hover{
-    fill:var(--primary-color)
+    fill:#00b688
 }
 .score-container input:checked ~ svg{
-    fill:var(--primary-color)
+    fill:#00b688
 }
 .radio-container{
     text-align: center;
