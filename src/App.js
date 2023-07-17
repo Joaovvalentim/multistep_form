@@ -11,13 +11,36 @@ import Thanks from './components/Thanks';
 import Steps from './components/Steps';
 //Hooks
 import { useForm } from './hooks/useForm';
+import { useState } from 'react';
 
-
+const formTemplate = {
+  name: "",
+  email: "",
+  datanascimento: "",
+  gender: "",
+  cep: "",
+  city: "",
+  district: "",
+  review: "",
+  comment: "",
+}
 
 function App() {
 
+  const [data, setData] = useState('data');
+
+const updateFieldHandler = (key, value) =>{
+  setData((prev) =>{
+    return{...prev, [key]:value}
+  })
+}
+
   const formComponents = [
-    <UserForm />, <UserDataForm />, <Location />, <ReviewForm />, <Thanks />]
+    <UserForm data={data} updateFieldHandler={updateFieldHandler}/>,
+    <UserDataForm data={data} updateFieldHandler={updateFieldHandler} />,
+    <Location data={data} updateFieldHandler={updateFieldHandler}/>,
+    <ReviewForm data={data} updateFieldHandler={updateFieldHandler}/>,
+    <Thanks data={data} />]
   const { currentStep, currentComponent, changeStep, isLastStep, isFirtsStep } = useForm(formComponents)
 
 
@@ -30,21 +53,21 @@ function App() {
         <p>Obrigado por completar o formulário! Entraremos em contato em breve.</p>
       </div>
       <div className='form-container'>
-        <Steps currentStep={currentStep}/>
+        <Steps currentStep={currentStep} />
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className='inputs-container'>{currentComponent}</div>
           <div className='actions'>
             {!isFirtsStep && (<button type='button' onClick={() => changeStep(currentStep - 1)}>
-              <GrFormPreviousLink/>
+              <GrFormPreviousLink />
               <span className='span'>Voltar</span>
             </button>)}
             {!isLastStep ? (<button type='submit'>
               <span className='span'>Avançar</span>
-              <GrFormNextLink/>
+              <GrFormNextLink />
             </button>
             ) : (<button type='button'>
               <span className='span'>Enviar</span>
-              <BsFillSendCheckFill/>
+              <BsFillSendCheckFill />
             </button>
             )}
           </div>

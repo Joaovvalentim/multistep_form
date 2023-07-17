@@ -7,7 +7,7 @@ import {
 } from "react-icons/bs"
 
 
-const ThanksForm = () => {
+const ThanksForm = ({data}) => {
     return (
         <div className="thanks-container">
             <h2>Falta Pouco...</h2>
