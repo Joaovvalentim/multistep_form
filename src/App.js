@@ -8,6 +8,7 @@ import UserDataForm from './components/UserData';
 import Location from './components/Location';
 import ReviewForm from './components/ReviewForm';
 import Thanks from './components/Thanks';
+import Steps from './components/Steps';
 //Hooks
 import { useForm } from './hooks/useForm';
 
@@ -29,7 +30,7 @@ function App() {
         <p>Obrigado por completar o formulário! Entraremos em contato em breve.</p>
       </div>
       <div className='form-container'>
-        <p>etapas</p>
+        <Steps currentStep={currentStep}/>
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className='inputs-container'>{currentComponent}</div>
           <div className='actions'>
