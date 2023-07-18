@@ -42,6 +42,15 @@ input:focus{
         width: 90px;
     }
   }
+  @media only screen and (max-width: 500px) {
+    .step{
+        width: 60px;
+        font-size: 0.5rem;  
+    }
+    .steps::after{
+        width: 280px;
+    }
+  }
   @media only screen and (max-width: 414px) {
     .step{
         width: 58px;
@@ -62,7 +71,7 @@ input:focus{
         width: 300px;
     }
   }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 390px) {
     .step{
         width: 50px;
         font-size: 0.5rem;    
