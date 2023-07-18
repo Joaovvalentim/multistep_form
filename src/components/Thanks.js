@@ -17,7 +17,6 @@ const ThanksForm = ({data}) => {
         <div className="thanks-container">
             <h2>Falta Pouco...</h2>
             <p>A sua opinião é muito importante, lembre-se de avaliar sua experiência</p>
-            <p>Para concluir seu formulario, clique em enviar!</p>
             <h3>Aqui está o resumo do seu Formulário: {data.name}</h3>
             <p className=" review-data">
                 <span>Nome: </span>

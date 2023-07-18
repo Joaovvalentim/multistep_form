@@ -17,6 +17,7 @@ export function useForm(steps) {
         currentComponent: steps[currentStep], // Componente correspondente ao passo atual
         changeStep, // Função para mudar o passo
         isLastStep: currentStep + 1 === steps.length ? true : false, // if para saber se esta no ultimo passo
-        isFirtsStep: currentStep === 0 ? true : false // if para saber se esta no primeiro passo
+        isFirtsStep: currentStep === 0 ? true : false, // if para saber se esta no primeiro passo
+        isSucessStep: currentStep + 1 === steps.length ? true : false, // if para saber se esta no ultimo passo
     };
 }

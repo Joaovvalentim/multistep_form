@@ -1,7 +1,6 @@
 import './App.css';
 //Components
 import { GrFormPreviousLink, GrFormNextLink } from 'react-icons/gr';
-import { BsFillSendCheckFill } from 'react-icons/bs';
 import { AiOutlineAlert } from 'react-icons/ai';
 import UserForm from './components/UserForm';
 import UserDataForm from './components/UserData';
@@ -9,6 +8,7 @@ import Location from './components/Location';
 import ReviewForm from './components/ReviewForm';
 import Thanks from './components/Thanks';
 import Steps from './components/Steps';
+import Sucess from './components/Sucess';
 //Hooks
 import { useForm } from './hooks/useForm';
 import { useState } from 'react';
@@ -40,9 +40,10 @@ const updateFieldHandler = (key, value) =>{
     <UserDataForm data={data} updateFieldHandler={updateFieldHandler} />,
     <Location data={data} updateFieldHandler={updateFieldHandler}/>,
     <ReviewForm data={data} updateFieldHandler={updateFieldHandler}/>,
-    <Thanks data={data} />]
-  const { currentStep, currentComponent, changeStep, isLastStep, isFirtsStep } = useForm(formComponents)
-
+    <Thanks data={data} />,
+    <Sucess/>
+  ]
+  const { currentStep, currentComponent, changeStep, isLastStep, isFirtsStep} = useForm(formComponents)
 
   return (
     <div className="app">
@@ -65,11 +66,8 @@ const updateFieldHandler = (key, value) =>{
               <span className='span'>Avançar</span>
               <GrFormNextLink />
             </button>
-            ) : (<button type='button'>
-              <span className='span'>Enviar</span>
-              <BsFillSendCheckFill />
-            </button>
-            )}
+            ):(<></>
+            )}           
           </div>
         </form>
       </div>

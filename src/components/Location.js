@@ -13,7 +13,6 @@ const LocationForm = ({ data, updateFieldHandler }) => {
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     setBairro(data.bairro);
                     setCidade(data.localidade);
                     setEstado(data.uf);

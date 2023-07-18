@@ -36,3 +36,50 @@ input:focus{
 .active>svg{
     fill: #00b688
 }
+
+@media only screen and (max-width: 570px) {
+    .step{
+        width: 90px;
+    }
+  }
+  @media only screen and (max-width: 414px) {
+    .step{
+        width: 58px;
+        padding: 0.4rem;
+        font-size: 0.5rem;  
+    }
+    .steps::after{
+        width: 300px;
+    }
+  }
+  @media only screen and (max-width: 412px) {
+    .step{
+        width: 58px;
+        padding: 0.4rem;
+        font-size: 0.5rem;    
+    }
+    .steps::after{
+        width: 300px;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .step{
+        width: 50px;
+        font-size: 0.5rem;    
+        padding: 0.2rem;
+    }
+    .steps::after{
+        width: 200px;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .step{
+        width: 50px;
+        font-size: 0.5rem;    
+        padding: 0.2rem;
+    }
+    .steps::after{
+        width: 200px;
+    }
+  }
+  
